@@ -74,6 +74,6 @@ class PostsController < ApplicationController
     end
     
     def new_method
-      puts "added"
+      puts "added new"
     end
 end
