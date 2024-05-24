@@ -3,7 +3,7 @@ class PostsController < ApplicationController
 
   # GET /posts or /posts.json
   def index
-    puts "index"
+    puts "index print"
     @posts = Post.all
   end
 
