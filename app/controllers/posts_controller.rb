@@ -3,6 +3,7 @@ class PostsController < ApplicationController
 
   # GET /posts or /posts.json
   def index
+    puts "index"
     @posts = Post.all
   end
 
@@ -18,6 +19,7 @@ class PostsController < ApplicationController
 
   # GET /posts/1/edit
   def edit
+    puts "printed"
   end
 
   # POST /posts or /posts.json
@@ -55,7 +57,7 @@ class PostsController < ApplicationController
     @post.destroy!
 
     respond_to do |format|
-      format.html { redirect_to posts_url, notice: "Post was successfully destroyed." }
+      format.html { redirect_to posts_url, notice: "Post was successfully destroyed" }
       format.json { head :no_content }
     end
   end
