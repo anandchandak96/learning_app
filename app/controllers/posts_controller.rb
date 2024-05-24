@@ -70,4 +70,8 @@ class PostsController < ApplicationController
     def post_params
       params.require(:post).permit(:title, :body)
     end
+    
+    def new_method
+      puts "added"
+    end
 end
