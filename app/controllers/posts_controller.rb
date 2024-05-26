@@ -22,6 +22,10 @@ class PostsController < ApplicationController
     puts "printed"
   end
 
+
+
+  
+
   # POST /posts or /posts.json
   def create
     @post = Post.new(post_params)
