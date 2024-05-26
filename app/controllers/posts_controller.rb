@@ -25,6 +25,9 @@ class PostsController < ApplicationController
   def create
     @post = Post.new(post_params)
 
+    
+    
+    
     respond_to do |format|
       if @post.save
         format.html { redirect_to post_url(@post), notice: "Post was successfully created----------------." }
@@ -41,7 +44,7 @@ class PostsController < ApplicationController
     respond_to do |format|
       if post_params
         if @post.update(post_params)
-          format.html { redirect_to post_url(@post), notice: "Post was successfully updated." }
+          format.html { redirect_to post_url(@post), notice: "Post was successfully updated.>>>>>>>>>" }
           format.json { render :show, status: :ok, location: @post }
         else
           format.html { render :edit, status: :unprocessable_entity }
