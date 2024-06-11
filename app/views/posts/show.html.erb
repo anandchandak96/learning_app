@@ -1,3 +1,4 @@
+<%= javascript_include_tag 'application' %>
 <p style="color: green"><%= notice %></p>
 
 <%= render @post %>
@@ -7,7 +8,28 @@
   <%= link_to "Back to posts", posts_path %>
 
   <%= button_to "Destroy this post", @post, method: :delete %>
+  
 </div>
 <div>
 <h1> hello </h1>
 </div>
+<button id = "button_1">post</button>
+<script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+<script>
+  $(document).ready(function() {
+    $("#button_1").click(function() {
+      $.ajax({
+        url: "/posts",
+        method: 'GET',
+        data: {},
+        success: function(result) {
+          console.log(result);
+        },
+        error: function(xhr, status, error) {
+          console.error("Error:", error);
+        }
+      });
+    });
+  });
+
+ </script> 
